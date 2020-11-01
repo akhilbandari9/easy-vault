@@ -10,6 +10,7 @@ const Contacts = () => {
 
 	useEffect(() => {
 		getContacts();
+
 		// eslint-disable-next-line
 	}, []);
 

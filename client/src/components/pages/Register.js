@@ -1,23 +1,23 @@
 import React, { useState, useContext, useEffect } from 'react';
-import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
-
-const Login = (props) => {
+import AuthContext from '../../context/auth/authContext';
+import { useHistory } from 'react-router-dom';
+const Register = () => {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
-
+	const history = useHistory();
 	const { setAlert } = alertContext;
-	const { error, login, clearErrors, isAuthenticated } = authContext;
+	const { register, error, clearErrors, isAuthenticated } = authContext;
 
 	useEffect(() => {
 		if (isAuthenticated) {
-			props.history.push('/');
+			history.push('/');
 		}
 		// eslint-disable-next-line
-	}, [isAuthenticated, props.history]);
+	}, [isAuthenticated]);
 
 	useEffect(() => {
-		if (error === 'Invalid Credentials') {
+		if (error === 'User already exists') {
 			setAlert(error, 'danger');
 			clearErrors();
 		}
@@ -25,10 +25,12 @@ const Login = (props) => {
 	}, [error]);
 
 	const [user, setUser] = useState({
+		name: '',
 		email: '',
 		password: '',
+		password2: '',
 	});
-	const { email, password } = user;
+	const { name, email, password, password2 } = user;
 
 	const onChange = (e) => {
 		setUser({
@@ -39,10 +41,14 @@ const Login = (props) => {
 
 	const onSubmit = (e) => {
 		e.preventDefault();
-		if (email === '' || password === '') {
-			setAlert('Please fill in all fields', 'danger');
+
+		if (name === '' || email === '' || password === '') {
+			setAlert('Please enter all fields', 'danger');
+		} else if (password !== password2) {
+			setAlert('Passwords do not Match', 'danger');
 		} else {
-			login({
+			register({
+				name,
 				email,
 				password,
 			});
@@ -52,9 +58,20 @@ const Login = (props) => {
 	return (
 		<div className='form-container'>
 			<h1>
-				Account <span className='text-primary'>Login</span>
+				Account <span className='text-primary'>Register</span>
 			</h1>
 			<form onSubmit={onSubmit}>
+				<div className='form-group'>
+					<label htmlFor='name'>Name</label>
+					<input
+						type='text'
+						name='name'
+						id='name'
+						value={name}
+						onChange={onChange}
+						required
+					/>
+				</div>
 				<div className='form-group'>
 					<label htmlFor='email'>Email</label>
 					<input
@@ -75,12 +92,24 @@ const Login = (props) => {
 						value={password}
 						onChange={onChange}
 						required
+						minLength='6'
 					/>
 				</div>
-
+				<div className='form-group'>
+					<label htmlFor='password2'>Confirm Password</label>
+					<input
+						type='password'
+						name='password2'
+						id='password2'
+						value={password2}
+						onChange={onChange}
+						required
+						minLength='6'
+					/>
+				</div>
 				<input
 					type='submit'
-					value='Login'
+					value='Register'
 					className='btn btn-primary btn-block'
 				/>
 			</form>
@@ -88,4 +117,4 @@ const Login = (props) => {
 	);
 };
 
-export default Login;
+export default Register;

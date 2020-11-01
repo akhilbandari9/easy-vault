@@ -12,10 +12,11 @@ app.use(express.json({ extended: false }));
 //Define Routes
 app.use('/api/users', require('./routes/users'));
 app.use('/api/contacts', require('./routes/contacts'));
+app.use('/api/passwords', require('./routes/passwords'));
+app.use('/api/notes', require('./routes/notes'));
 app.use('/api/auth', require('./routes/auth'));
 
 //production
-
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 

@@ -442,3 +442,5 @@ table th {
 		justify-content: center;
 	}
 }
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
