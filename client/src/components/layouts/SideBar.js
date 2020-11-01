@@ -5,7 +5,7 @@ import routes from '../../routes';
 function SideBar() {
 	return (
 		<>
-			<div className=''>
+			<div className='mb-3'>
 				<ul className='list-group'>
 					<NavLink
 						to={routes.contacts}

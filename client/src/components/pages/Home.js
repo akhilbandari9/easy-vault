@@ -15,17 +15,19 @@ const Home = () => {
 		// eslint-disable-next-line
 	}, []);
 	return (
-		<div className='row container-fluid'>
-			<div className='col-2'>
-				<SideBar />
-			</div>
-			<div className='col-10 container'>
-				<Switch>
-					<Route path='/app/contacts' component={Contacts} exact />
-					<Route path='/app/passwords' component={Passwords} exact />
-					<Route path='/app/notes' component={Notes} exact />
-					<Redirect from='/app' to='/app/contacts' exact />
-				</Switch>
+		<div className='container-fluid'>
+			<div className='row'>
+				<div className='col-md-2'>
+					<SideBar />
+				</div>
+				<div className='col-md-10'>
+					<Switch>
+						<Route path='/app/contacts' component={Contacts} exact />
+						<Route path='/app/passwords' component={Passwords} exact />
+						<Route path='/app/notes' component={Notes} exact />
+						<Redirect from='/app' to='/app/contacts' exact />
+					</Switch>
+				</div>
 			</div>
 		</div>
 	);

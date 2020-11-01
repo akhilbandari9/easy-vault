@@ -6,13 +6,15 @@ import Contacts from '../contacts/Contacts';
 const ContactsHome = () => {
 	return (
 		<>
-			<div className='grid-2'>
-				<div>
-					<ContactForm />
-				</div>
-				<div>
-					<ContactFilter />
-					<Contacts />
+			<div className='container'>
+				<div className='row'>
+					<div className='col-lg-5'>
+						<ContactForm />
+					</div>
+					<div className='col-lg-7'>
+						<ContactFilter />
+						<Contacts />
+					</div>
 				</div>
 			</div>
 		</>

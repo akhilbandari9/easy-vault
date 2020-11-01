@@ -16,11 +16,11 @@ const Index = () => {
 		//eslint-disable-next-line
 	}, [passwords]);
 	return (
-		<div className='grid-2'>
-			<div className='form'>
+		<div className='row'>
+			<div className='col-lg-6'>
 				<PasswordsForm />
 			</div>
-			<div className='list'>
+			<div className='col-lg-6'>
 				<PasswordsSearch />
 				<PasswordsList list={passwords} loading={loading} />
 			</div>

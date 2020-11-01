@@ -47,40 +47,48 @@ const Login = () => {
 	};
 
 	return (
-		<div className='form-container'>
-			<h1>
-				Account <span className='text-primary'>Login</span>
-			</h1>
-			<form onSubmit={onSubmit}>
-				<div className='form-group'>
-					<label htmlFor='email'>Email</label>
-					<input
-						type='email'
-						name='email'
-						id='email'
-						value={email}
-						onChange={onChange}
-						required
-					/>
-				</div>
-				<div className='form-group'>
-					<label htmlFor='password'>Password</label>
-					<input
-						type='password'
-						name='password'
-						id='password'
-						value={password}
-						onChange={onChange}
-						required
-					/>
-				</div>
+		<div className='container-sm row d-flex justify-content-center align-items-center mt-5'>
+			<div style={{ width: '500px' }}>
+				<h1>
+					Account <span className='text-primary'>Login</span>
+				</h1>
+				<form onSubmit={onSubmit}>
+					<div className='mb-3'>
+						<label htmlFor='email' className='form-label'>
+							Email
+						</label>
+						<input
+							className='form-control'
+							type='email'
+							name='email'
+							id='email'
+							value={email}
+							onChange={onChange}
+							required
+						/>
+					</div>
+					<div className='mb-3'>
+						<label htmlFor='password' className='form-label'>
+							Password
+						</label>
+						<input
+							className='form-control'
+							type='password'
+							name='password'
+							id='password'
+							value={password}
+							onChange={onChange}
+							required
+						/>
+					</div>
 
-				<input
-					type='submit'
-					value='Login'
-					className='btn btn-primary btn-block'
-				/>
-			</form>
+					<input
+						type='submit'
+						value='Login'
+						className='btn btn-primary btn-block'
+					/>
+				</form>
+			</div>
 		</div>
 	);
 };

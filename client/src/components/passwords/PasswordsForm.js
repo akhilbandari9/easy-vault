@@ -40,6 +40,7 @@ const PasswordsForm = () => {
 
 	return (
 		<form className='form' onSubmit={submitHandler}>
+			<h4 className='text-center mb-2 text-secondary'>Save Password</h4>
 			<div className='mb-2'>
 				<label className='form-label'>Servide Provider</label>
 				<input

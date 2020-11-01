@@ -9,7 +9,7 @@ const NoteItem = ({ item: { _id, title, body, color }, setViewer }) => {
 
 	return (
 		<div
-			className='border-bottom m-3'
+			className='border-bottom my-2'
 			ref={inputref}
 			id={_id}
 			onClick={setRef}

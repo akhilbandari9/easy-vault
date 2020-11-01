@@ -49,69 +49,80 @@ const ContactForm = () => {
 		clearCurrent();
 	};
 	return (
-		<form onSubmit={onSubmit}>
-			<h2 className='text-primary'>
-				{current ? 'Edit Contact' : 'Add Contact'}
-			</h2>
-			<input
-				type='text'
-				name='name'
-				placeholder='Name'
-				value={name}
-				onChange={onChange}
-			/>
-			<input
-				type='email'
-				name='email'
-				placeholder='Eame'
-				value={email}
-				onChange={onChange}
-			/>
-			<input
-				type='text'
-				name='phone'
-				placeholder='Phone'
-				value={phone}
-				onChange={onChange}
-			/>
-			<h6>Contact Type</h6>
-			<div className='form-check'>
+		<div className='container'>
+			<form onSubmit={onSubmit} className=''>
+				<h4 className='text-secondary text-center mb-2'>
+					{current ? 'Edit Contact' : 'Add Contact'}
+				</h4>
 				<input
-					className='form-check-input'
-					type='radio'
-					name='type'
-					value='personal'
-					checked={type === 'personal'}
+					className='form-control  mb-3'
+					type='text'
+					name='name'
+					placeholder='Name'
+					value={name}
 					onChange={onChange}
 				/>
-				<label className='form-check-label'>Personal</label>
-			</div>
-			<div className='form-check'>
 				<input
-					className='form-check-input'
-					type='radio'
-					name='type'
-					value='professional'
-					checked={type === 'professional'}
+					className='form-control mb-3'
+					type='email'
+					name='email'
+					placeholder='Email'
+					value={email}
 					onChange={onChange}
 				/>
-				<label className='form-check-label'>Professional</label>
-			</div>
-			<div>
 				<input
-					type='submit'
-					value={current ? 'Update Contact' : 'Add Contact'}
-					className='btn btn-primary btn-block'
+					className='form-control mb-3'
+					type='text'
+					name='phone'
+					placeholder='Phone'
+					value={phone}
+					onChange={onChange}
 				/>
-			</div>
-			{current && (
-				<div>
-					<button className='btn btn-light btn-block' onClick={clearAll}>
-						Clear
-					</button>
+				<h5>Contact Type</h5>
+				<div className='form-check'>
+					<input
+						className='form-check-input'
+						type='radio'
+						name='type'
+						value='personal'
+						checked={type === 'personal'}
+						onChange={onChange}
+						id='personal-check'
+					/>
+					<label className='form-check-label' htmlFor='personal-check'>
+						Personal
+					</label>
 				</div>
-			)}
-		</form>
+				<div className='form-check'>
+					<input
+						className='form-check-input'
+						type='radio'
+						name='type'
+						value='professional'
+						checked={type === 'professional'}
+						onChange={onChange}
+						id='perofessional-check'
+					/>
+					<label className='form-check-label' htmlFor='perofessional-check'>
+						Professional
+					</label>
+				</div>
+				<div className='mt-2 mb-3'>
+					<input
+						type='submit'
+						value={current ? 'Update Contact' : 'Add Contact'}
+						className='btn btn-primary btn-block'
+					/>
+				</div>
+				{current && (
+					<div>
+						<button className='btn btn-light btn-block mb-3' onClick={clearAll}>
+							Clear
+						</button>
+					</div>
+				)}
+			</form>
+		</div>
 	);
 };
 

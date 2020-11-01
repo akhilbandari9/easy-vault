@@ -23,6 +23,7 @@ const ContactFilter = () => {
 	return (
 		<form>
 			<input
+				className='form-control mb-2'
 				ref={text}
 				type='text'
 				placeholder='Filter Contacts'

@@ -55,7 +55,7 @@ const NotesEditor = ({ setViewerComponent, setEditMode }) => {
 	};
 
 	return (
-		<form onSubmit={Submit}>
+		<form onSubmit={Submit} className='mb-4'>
 			<div className='container'>
 				<h2>Notes Editor</h2>
 				<div>
@@ -70,9 +70,9 @@ const NotesEditor = ({ setViewerComponent, setEditMode }) => {
 								onChange={handleText}
 							/>
 						</div>
-						<div className='color-box d-flex mt-3'>
+						<div className='color-box d-flex mt-3 flex-wrap'>
 							<label className='form-label mr-3'>Color Tag</label>
-							<div className='color-array d-flex'>
+							<div className='color-array d-flex flex-wrap'>
 								{colorArr.map((item, i) => (
 									<ColorPicker
 										color={item}
@@ -95,7 +95,11 @@ const NotesEditor = ({ setViewerComponent, setEditMode }) => {
 							onChange={handleText}
 						/>
 					</div>
-					<input type='submit' value='Save' className='btn btn-primary mt-2' />
+					<input
+						type='submit'
+						value={currentNote === null ? `Save` : `Update`}
+						className='btn btn-primary mt-2'
+					/>
 				</div>
 			</div>
 		</form>

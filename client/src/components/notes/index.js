@@ -42,33 +42,41 @@ const Index = () => {
 	};
 
 	return (
-		<div className='row'>
-			<div className='col-4'>
-				<div>
-					<AddNewNote addNewNoteHandler={addNewNoteHandler} />
-					<SearchNotes />
+		<div className='container-fluid'>
+			<div className='row'>
+				<div className='col-4'>
+					<div>
+						<AddNewNote addNewNoteHandler={addNewNoteHandler} />
+						<SearchNotes />
+					</div>
+					<NotesList list={notesList} setViewer={setViewer} />
 				</div>
-				<NotesList list={notesList} setViewer={setViewer} />
-			</div>
-			<div className='col-8'>
-				{!editMode ? (
-					viewerComponent ? (
-						<NotesViewer
-							item={currentNote}
-							activateEditor={activateEditor}
-							deleteNote={deleteNote}
+				<div className='col-8'>
+					{!editMode ? (
+						viewerComponent ? (
+							<NotesViewer
+								item={currentNote}
+								activateEditor={activateEditor}
+								deleteNote={deleteNote}
+								setViewerComponent={setViewerComponent}
+							/>
+						) : (
+							<div className='d-flex justify-content-center align-items-center'>
+								<h5>Select a note to view</h5>
+								<h6 className='text-secondary ml-2'>or</h6>
+								<div className='w-25 ml-3'>
+									<AddNewNote addNewNoteHandler={addNewNoteHandler} />
+								</div>
+							</div>
+						)
+					) : (
+						<NotesEditor
+							setViewerOnSubmit={setViewer}
+							setEditMode={setEditMode}
 							setViewerComponent={setViewerComponent}
 						/>
-					) : (
-						<h3>Select a note to view</h3>
-					)
-				) : (
-					<NotesEditor
-						setViewerOnSubmit={setViewer}
-						setEditMode={setEditMode}
-						setViewerComponent={setViewerComponent}
-					/>
-				)}
+					)}
+				</div>
 			</div>
 		</div>
 	);

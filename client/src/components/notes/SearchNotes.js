@@ -11,7 +11,7 @@ function SearchNotes() {
 		filteredNotes(input);
 	};
 	return (
-		<div className='input-group'>
+		<div className='input-group mb-4'>
 			<input
 				type='text'
 				className='form-control'

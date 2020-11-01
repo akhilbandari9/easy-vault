@@ -1,7 +1,7 @@
 {
-	"name": "contact-keeper",
-	"version": "1.0.0",
-	"description": "Contact Keeper App",
+	"name": "easy-vault",
+	"version": "2.0.0",
+	"description": "A simple app to save your Contacts, passwords and take notes",
 	"main": "server.js",
 	"scripts": {
 		"start": "node server.js",

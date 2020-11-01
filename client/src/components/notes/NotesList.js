@@ -6,7 +6,7 @@ import NoteItem from './NoteItem';
 const NotesList = ({ list, setViewer }) => {
 	const { filteredNotesList, notesList } = useContext(notesContext);
 	return (
-		<div>
+		<div className=''>
 			{list !== null ? (
 				filteredNotesList !== null ? (
 					filteredNotesList.map((item) => (
