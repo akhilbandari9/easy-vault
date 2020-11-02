@@ -1,11 +1,11 @@
 import React from 'react';
-import spinner from './spinner.gif';
+
 export const Spinner = () => (
-	<img
-		src={spinner}
-		alt='Loading...'
-		style={{ width: '200px', margin: 'auto', display: 'block' }}
-	/>
+	<div className='d-flex justify-content-center'>
+		<div className='spinner-border' role='status'>
+			<span className='visually-hidden'>Loading...</span>
+		</div>
+	</div>
 );
 
 export default Spinner;

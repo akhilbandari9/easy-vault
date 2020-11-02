@@ -16,21 +16,21 @@ const PasswordItem = ({
 	};
 
 	return (
-		<div className='card p-4 mb-3'>
-			<div className='service-name mb-3'>
+		<div className='card bg-light mb-2 pt-3 pb-2 px-3'>
+			<div className='mb-2'>
 				<label> Provider : </label>
 				<h5 style={{ display: 'inline' }}>{`  ${service_name}`}</h5>
 			</div>
 
 			{username && (
-				<div className='username mb-3'>
+				<div className='mb-2'>
 					<label> Email : </label>
 					<span>{`  ${username}`}</span>
 				</div>
 			)}
 
 			{email && (
-				<div className='email mb-3'>
+				<div className='mb-2'>
 					<label> Username : </label>
 					<span>{`  ${email}`}</span>
 				</div>
@@ -51,10 +51,10 @@ const PasswordItem = ({
 			)}
 
 			<button
-				className='btn btn-danger w-25 ml-auto mt-2'
+				className='btn btn-outline-danger w-25 ml-auto mt-2'
 				onClick={deleteHandler}
 			>
-				Delete
+				<i className='fas fa-trash'></i>
 			</button>
 		</div>
 	);

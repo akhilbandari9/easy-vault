@@ -38,8 +38,8 @@ const App = () => {
 					<NotesState>
 						<AlertState>
 							<Router>
-								<Navbar />
-								<div className='container'>
+								<div className='container-fluid'>
+									<Navbar />
 									<Alerts />
 									<Switch>
 										<Route exact path='/about' component={About} />

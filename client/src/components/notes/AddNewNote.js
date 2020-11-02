@@ -6,11 +6,11 @@ const AddNewNote = ({ addNewNoteHandler }) => {
 	};
 	return (
 		<button
-			className='btn btn-outline-secondary btn-block mb-3'
+			className='btn btn-outline-secondary btn-block mb-2'
 			onClick={addNewHandler}
 		>
 			<i className='fas fa-plus d-inline'></i>
-			<span className='ml-3 text-nowrap'>New Note</span>
+			<span className='ml-3'>New Note</span>
 		</button>
 	);
 };
