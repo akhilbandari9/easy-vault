@@ -49,6 +49,7 @@ const ContactForm = () => {
 		clearCurrent();
 	};
 	return (
+<<<<<<< HEAD
 		<div className='container'>
 			<form onSubmit={onSubmit} className=''>
 				<h4 className='text-secondary text-center mb-2'>
@@ -56,6 +57,15 @@ const ContactForm = () => {
 				</h4>
 				<input
 					className='form-control  mb-3'
+=======
+		<div className='my-3'>
+			<form onSubmit={onSubmit}>
+				<h3 className='text-secondary'>
+					{current ? 'Edit Contact' : 'Add Contact'}
+				</h3>
+				<input
+					className='form-control mb-2'
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					type='text'
 					name='name'
 					placeholder='Name'
@@ -63,23 +73,39 @@ const ContactForm = () => {
 					onChange={onChange}
 				/>
 				<input
+<<<<<<< HEAD
 					className='form-control mb-3'
 					type='email'
 					name='email'
 					placeholder='Email'
+=======
+					className='form-control mb-2'
+					type='email'
+					name='email'
+					placeholder='Eame'
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					value={email}
 					onChange={onChange}
 				/>
 				<input
+<<<<<<< HEAD
 					className='form-control mb-3'
+=======
+					className='form-control mb-2'
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					type='text'
 					name='phone'
 					placeholder='Phone'
 					value={phone}
 					onChange={onChange}
 				/>
+<<<<<<< HEAD
 				<h5>Contact Type</h5>
 				<div className='form-check'>
+=======
+				<h6>Contact Type</h6>
+				<div className='form-check ml-2 mb-2'>
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					<input
 						className='form-check-input'
 						type='radio'
@@ -87,6 +113,7 @@ const ContactForm = () => {
 						value='personal'
 						checked={type === 'personal'}
 						onChange={onChange}
+<<<<<<< HEAD
 						id='personal-check'
 					/>
 					<label className='form-check-label' htmlFor='personal-check'>
@@ -94,6 +121,15 @@ const ContactForm = () => {
 					</label>
 				</div>
 				<div className='form-check'>
+=======
+						id='personal'
+					/>
+					<label className='form-check-label' htmlFor='personal'>
+						Personal
+					</label>
+				</div>
+				<div className='form-check ml-2 mb-2'>
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					<input
 						className='form-check-input'
 						type='radio'
@@ -101,6 +137,7 @@ const ContactForm = () => {
 						value='professional'
 						checked={type === 'professional'}
 						onChange={onChange}
+<<<<<<< HEAD
 						id='perofessional-check'
 					/>
 					<label className='form-check-label' htmlFor='perofessional-check'>
@@ -108,6 +145,15 @@ const ContactForm = () => {
 					</label>
 				</div>
 				<div className='mt-2 mb-3'>
+=======
+						id='professional'
+					/>
+					<label className='form-check-label' htmlFor='professional'>
+						Professional
+					</label>
+				</div>
+				<div>
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					<input
 						type='submit'
 						value={current ? 'Update Contact' : 'Add Contact'}
@@ -116,7 +162,11 @@ const ContactForm = () => {
 				</div>
 				{current && (
 					<div>
+<<<<<<< HEAD
 						<button className='btn btn-light btn-block mb-3' onClick={clearAll}>
+=======
+						<button className='btn btn-light btn-block' onClick={clearAll}>
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 							Clear
 						</button>
 					</div>

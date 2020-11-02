@@ -56,6 +56,7 @@ const Register = () => {
 	};
 
 	return (
+<<<<<<< HEAD
 		<div className='container-sm row d-flex justify-content-center align-items-center mt-4'>
 			<div className='mx-auto' style={{ width: '500px' }}>
 				<h1>
@@ -127,6 +128,81 @@ const Register = () => {
 					/>
 				</form>
 			</div>
+=======
+		<div className='container-sm d-flex justify-content-center mt-5'>
+			<form
+				onSubmit={onSubmit}
+				className='container-sm'
+				style={{ width: '500px', margin: 'auto' }}
+			>
+				<h1>
+					Account <span className='text-primary'>Register</span>
+				</h1>
+				<div className='mb-2'>
+					<label htmlFor='name' className='form-label'>
+						Name
+					</label>
+					<input
+						className='form-control'
+						type='text'
+						name='name'
+						id='name'
+						value={name}
+						onChange={onChange}
+						required
+					/>
+				</div>
+				<div className='mb-2'>
+					<label htmlFor='email' className='form-label'>
+						Email
+					</label>
+					<input
+						className='form-control'
+						type='email'
+						name='email'
+						id='email'
+						value={email}
+						onChange={onChange}
+						required
+					/>
+				</div>
+				<div className='mb-2'>
+					<label htmlFor='password' className='form-label'>
+						Password
+					</label>
+					<input
+						className='form-control'
+						type='password'
+						name='password'
+						id='password'
+						value={password}
+						onChange={onChange}
+						required
+						minLength='6'
+					/>
+				</div>
+				<div className='mb-3'>
+					<label htmlFor='password2' className='form-label'>
+						Confirm Password
+					</label>
+					<input
+						className='form-control'
+						type='password'
+						name='password2'
+						id='password2'
+						value={password2}
+						onChange={onChange}
+						required
+						minLength='6'
+					/>
+				</div>
+				<input
+					type='submit'
+					value='Register'
+					className='btn btn-primary btn-block'
+				/>
+			</form>
+>>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 		</div>
 	);
 };
