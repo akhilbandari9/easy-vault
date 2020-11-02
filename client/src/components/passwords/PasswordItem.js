@@ -16,38 +16,22 @@ const PasswordItem = ({
 	};
 
 	return (
-<<<<<<< HEAD
 		<div className='card px-4 py-3 mb-2'>
 			<div className='service-name mb-2'>
 				<label className='text-secondary'> Provider : </label>
-=======
-		<div className='card bg-light mb-2 pt-3 pb-2 px-3'>
-			<div className='mb-2'>
-				<label> Provider : </label>
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 				<h5 style={{ display: 'inline' }}>{`  ${service_name}`}</h5>
 			</div>
 
 			{username && (
-<<<<<<< HEAD
 				<div className='username mb-2'>
 					<label className='text-secondary'> Email : </label>
-=======
-				<div className='mb-2'>
-					<label> Email : </label>
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					<span>{`  ${username}`}</span>
 				</div>
 			)}
 
 			{email && (
-<<<<<<< HEAD
 				<div className='email mb-2'>
 					<label className='text-secondary'> Username : </label>
-=======
-				<div className='mb-2'>
-					<label> Username : </label>
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					<span>{`  ${email}`}</span>
 				</div>
 			)}

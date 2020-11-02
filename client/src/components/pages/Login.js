@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import AuthContext from '../../context/auth/authContext';
 import AlertContext from '../../context/alert/alertContext';
-import { useHistory } from 'react-router-dom';
+import { useHistory, NavLink } from 'react-router-dom';
 const Login = () => {
 	const alertContext = useContext(AlertContext);
 	const authContext = useContext(AuthContext);
@@ -47,57 +47,12 @@ const Login = () => {
 	};
 
 	return (
-<<<<<<< HEAD
-		<div className='container-sm row d-flex justify-content-center align-items-center mt-5'>
-			<div style={{ width: '500px' }}>
+		<div className='row d-flex justify-content-center mt-5'>
+			<form onSubmit={onSubmit} style={{ width: '500px', margin: 'auto' }}>
 				<h1>
 					Account <span className='text-primary'>Login</span>
 				</h1>
-				<form onSubmit={onSubmit}>
-					<div className='mb-3'>
-						<label htmlFor='email' className='form-label'>
-							Email
-						</label>
-						<input
-							className='form-control'
-							type='email'
-							name='email'
-							id='email'
-							value={email}
-							onChange={onChange}
-							required
-						/>
-					</div>
-					<div className='mb-3'>
-						<label htmlFor='password' className='form-label'>
-							Password
-						</label>
-						<input
-							className='form-control'
-							type='password'
-							name='password'
-							id='password'
-							value={password}
-							onChange={onChange}
-							required
-						/>
-					</div>
-
-					<input
-						type='submit'
-						value='Login'
-						className='btn btn-primary btn-block'
-=======
-		<div className='container d-flex justify-content-center mt-5'>
-			<form
-				onSubmit={onSubmit}
-				className='container-sm'
-				style={{ width: '500px', margin: 'auto' }}
-			>
-				<h1>
-					Account <span className='text-primary'>Login</span>
-				</h1>
-				<div className='mb-2'>
+				<div className='mb-3'>
 					<label htmlFor='email' className='form-label'>
 						Email
 					</label>
@@ -112,7 +67,9 @@ const Login = () => {
 					/>
 				</div>
 				<div className='mb-3'>
-					<label htmlFor='password'>Password</label>
+					<label htmlFor='password' className='form-label'>
+						Password
+					</label>
 					<input
 						className='form-control'
 						type='password'
@@ -121,10 +78,18 @@ const Login = () => {
 						value={password}
 						onChange={onChange}
 						required
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 					/>
-				</form>
-			</div>
+				</div>
+
+				<input
+					type='submit'
+					value='Login'
+					className='btn btn-primary btn-block'
+				/>
+				<p className='text-center mt-3'>
+					New Users <NavLink to='/auth/register'>Register Here</NavLink>
+				</p>
+			</form>
 		</div>
 	);
 };

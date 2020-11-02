@@ -70,11 +70,7 @@ const NotesEditor = ({ setViewerComponent, setEditMode }) => {
 								onChange={handleText}
 							/>
 						</div>
-<<<<<<< HEAD
-						<div className='color-box d-flex mt-3 flex-wrap'>
-=======
 						<div className='color-box d-flex mt-2 flex-wrap'>
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 							<label className='form-label mr-3'>Color Tag</label>
 							<div className='color-array d-flex flex-wrap'>
 								{colorArr.map((item, i) => (

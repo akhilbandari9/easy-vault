@@ -42,7 +42,6 @@ const Index = () => {
 	};
 
 	return (
-<<<<<<< HEAD
 		<div className='container-fluid'>
 			<div className='row'>
 				<div className='col-4'>
@@ -51,13 +50,6 @@ const Index = () => {
 						<SearchNotes />
 					</div>
 					<NotesList list={notesList} setViewer={setViewer} />
-=======
-		<div className='row mt-3'>
-			<div className='col-4'>
-				<div>
-					<AddNewNote addNewNoteHandler={addNewNoteHandler} />
-					<SearchNotes />
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 				</div>
 				<div className='col-8'>
 					{!editMode ? (
@@ -83,27 +75,8 @@ const Index = () => {
 							setEditMode={setEditMode}
 							setViewerComponent={setViewerComponent}
 						/>
-<<<<<<< HEAD
 					)}
 				</div>
-=======
-					) : (
-						<div className='container d-flex justify-content-center align-items-center'>
-							<p>Select a Note to View</p>
-							<p className='text-secondary ml-2'>or</p>
-							<div className='w-25 ml-2'>
-								<AddNewNote />
-							</div>
-						</div>
-					)
-				) : (
-					<NotesEditor
-						setViewerOnSubmit={setViewer}
-						setEditMode={setEditMode}
-						setViewerComponent={setViewerComponent}
-					/>
-				)}
->>>>>>> c6610fa28e5f0d540171f7cb1253d6603c323fa5
 			</div>
 		</div>
 	);
