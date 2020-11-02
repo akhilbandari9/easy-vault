@@ -47,14 +47,21 @@ const Login = () => {
 	};
 
 	return (
-		<div className='form-container'>
-			<h1>
-				Account <span className='text-primary'>Login</span>
-			</h1>
-			<form onSubmit={onSubmit}>
-				<div className='form-group'>
-					<label htmlFor='email'>Email</label>
+		<div className='container d-flex justify-content-center mt-5'>
+			<form
+				onSubmit={onSubmit}
+				className='container-sm'
+				style={{ width: '500px', margin: 'auto' }}
+			>
+				<h1>
+					Account <span className='text-primary'>Login</span>
+				</h1>
+				<div className='mb-2'>
+					<label htmlFor='email' className='form-label'>
+						Email
+					</label>
 					<input
+						className='form-control'
 						type='email'
 						name='email'
 						id='email'
@@ -63,9 +70,10 @@ const Login = () => {
 						required
 					/>
 				</div>
-				<div className='form-group'>
+				<div className='mb-3'>
 					<label htmlFor='password'>Password</label>
 					<input
+						className='form-control'
 						type='password'
 						name='password'
 						id='password'

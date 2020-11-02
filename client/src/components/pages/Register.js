@@ -56,14 +56,21 @@ const Register = () => {
 	};
 
 	return (
-		<div className='form-container'>
-			<h1>
-				Account <span className='text-primary'>Register</span>
-			</h1>
-			<form onSubmit={onSubmit}>
-				<div className='form-group'>
-					<label htmlFor='name'>Name</label>
+		<div className='container-sm d-flex justify-content-center mt-5'>
+			<form
+				onSubmit={onSubmit}
+				className='container-sm'
+				style={{ width: '500px', margin: 'auto' }}
+			>
+				<h1>
+					Account <span className='text-primary'>Register</span>
+				</h1>
+				<div className='mb-2'>
+					<label htmlFor='name' className='form-label'>
+						Name
+					</label>
 					<input
+						className='form-control'
 						type='text'
 						name='name'
 						id='name'
@@ -72,9 +79,12 @@ const Register = () => {
 						required
 					/>
 				</div>
-				<div className='form-group'>
-					<label htmlFor='email'>Email</label>
+				<div className='mb-2'>
+					<label htmlFor='email' className='form-label'>
+						Email
+					</label>
 					<input
+						className='form-control'
 						type='email'
 						name='email'
 						id='email'
@@ -83,9 +93,12 @@ const Register = () => {
 						required
 					/>
 				</div>
-				<div className='form-group'>
-					<label htmlFor='password'>Password</label>
+				<div className='mb-2'>
+					<label htmlFor='password' className='form-label'>
+						Password
+					</label>
 					<input
+						className='form-control'
 						type='password'
 						name='password'
 						id='password'
@@ -95,9 +108,12 @@ const Register = () => {
 						minLength='6'
 					/>
 				</div>
-				<div className='form-group'>
-					<label htmlFor='password2'>Confirm Password</label>
+				<div className='mb-3'>
+					<label htmlFor='password2' className='form-label'>
+						Confirm Password
+					</label>
 					<input
+						className='form-control'
 						type='password'
 						name='password2'
 						id='password2'

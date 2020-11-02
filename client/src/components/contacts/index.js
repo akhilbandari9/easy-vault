@@ -6,11 +6,11 @@ import Contacts from '../contacts/Contacts';
 const ContactsHome = () => {
 	return (
 		<>
-			<div className='grid-2'>
-				<div>
+			<div className='row'>
+				<div className='col-lg-6'>
 					<ContactForm />
 				</div>
-				<div>
+				<div className='col-lg-6'>
 					<ContactFilter />
 					<Contacts />
 				</div>

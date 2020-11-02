@@ -42,7 +42,7 @@ const Index = () => {
 	};
 
 	return (
-		<div className='row'>
+		<div className='row mt-3'>
 			<div className='col-4'>
 				<div>
 					<AddNewNote addNewNoteHandler={addNewNoteHandler} />
@@ -60,7 +60,13 @@ const Index = () => {
 							setViewerComponent={setViewerComponent}
 						/>
 					) : (
-						<h3>Select a note to view</h3>
+						<div className='container d-flex justify-content-center align-items-center'>
+							<p>Select a Note to View</p>
+							<p className='text-secondary ml-2'>or</p>
+							<div className='w-25 ml-2'>
+								<AddNewNote />
+							</div>
+						</div>
 					)
 				) : (
 					<NotesEditor

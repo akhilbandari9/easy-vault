@@ -12,44 +12,44 @@ const ContactItem = ({ contact }) => {
 		clearCurrent();
 	};
 	return (
-		<div className='card bg-light'>
-			<h3 className='text-primary text-left'>
-				{name}{' '}
+		<div className='card bg-light mb-2 pt-3 pb-2 px-3'>
+			<h5 className='text-secondary text-left'>
+				{name}
 				<span
-					style={{ float: 'right' }}
+					style={{ float: 'right', fontSize: '.8rem' }}
 					className={
-						'badge ' +
-						(type === 'professional' ? 'badge-success' : 'badge-primary')
+						'badge rounded-pill ' +
+						(type === 'professional' ? 'bg-success' : 'bg-primary')
 					}
 				>
 					{type[0].toUpperCase() + type.slice(1)}
 				</span>
-			</h3>
-			<ul className='list'>
+			</h5>
+			<ul className='mb-2'>
 				{email && (
-					<li>
-						<i className='fas fa fa-envelope-open mr-1'></i>
-						{email}
-					</li>
+					<p className='mb-2'>
+						<i className='fas fa fa-envelope-open mr-2'></i>
+						<span>{email}</span>
+					</p>
 				)}
 				{phone && (
-					<li>
-						<i className='fas fa fa-phone mr-1'></i>
-						{phone}
-					</li>
+					<p className='mb-2'>
+						<i className='fas fa fa-phone mr-2'></i>
+						<span>{phone}</span>
+					</p>
 				)}
 			</ul>
-			<p>
+			<div className='btn-group ml-auto' style={{ width: '40%' }}>
 				<button
-					className='btn btn-dark btn-sm'
+					className='btn btn-outline-secondary btn-sm'
 					onClick={() => setCurrent(contact)}
 				>
-					Edit
+					<i className='fas fa-pencil-alt'></i>
 				</button>
-				<button className='btn btn-danger btn-sm' onClick={onDelete}>
-					Delete
+				<button className='btn btn-outline-danger btn-sm' onClick={onDelete}>
+					<i className='fas fa-trash'></i>
 				</button>
-			</p>
+			</div>
 		</div>
 	);
 };

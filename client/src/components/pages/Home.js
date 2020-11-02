@@ -15,11 +15,11 @@ const Home = () => {
 		// eslint-disable-next-line
 	}, []);
 	return (
-		<div className='row container-fluid'>
-			<div className='col-2'>
+		<div className='row container-fluid mt-3'>
+			<div className='col-md-2'>
 				<SideBar />
 			</div>
-			<div className='col-10 container'>
+			<div className='col-md-10 container-sm'>
 				<Switch>
 					<Route path='/app/contacts' component={Contacts} exact />
 					<Route path='/app/passwords' component={Passwords} exact />
