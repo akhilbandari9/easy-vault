@@ -5,13 +5,12 @@ const AddNewNote = ({ addNewNoteHandler }) => {
 		addNewNoteHandler();
 	};
 	return (
-		<button
-			className='btn btn-outline-secondary btn-block mb-2'
-			onClick={addNewHandler}
-		>
-			<i className='fas fa-plus d-inline'></i>
-			<span className='ml-3'>New Note</span>
-		</button>
+		<div className=''>
+			<button className='btn btn-secondary mb-2' onClick={addNewHandler}>
+				<i className='fas fa-plus d-inline'></i>
+				<span className='ml-3 d-none d-md-block'>New Note</span>
+			</button>
+		</div>
 	);
 };
 

@@ -15,14 +15,14 @@ const NoteItem = ({ item: { _id, title, body, color }, setViewer }) => {
 			onClick={setRef}
 			style={{ cursor: 'pointer' }}
 		>
-			<div className='title d-flex justify-content-between'>
+			<div className='title'>
 				<h5 className='h6'>{title}</h5>
 				<div
-					className='card mr-3 p-0'
-					style={{ background: `${color}`, height: '20px', width: '20px' }}
+					className='rounded w-25 mb-2'
+					style={{ background: `${color}`, height: '1rem' }}
 				></div>
 			</div>
-			<p className='mb-3' style={{ fontSize: '14px' }}>
+			<p className='mb-3 d-none d-md-block' style={{ fontSize: '14px' }}>
 				{body.slice(0, 30)}...
 			</p>
 		</div>

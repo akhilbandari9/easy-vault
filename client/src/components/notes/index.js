@@ -44,31 +44,52 @@ const Index = () => {
 	return (
 		<div className='container-fluid'>
 			<div className='row'>
+				<div>
+					<SearchNotes />
+				</div>
 				<div className='col-4'>
-					<div>
+					<div className='d-none d-md-block'>
 						<AddNewNote addNewNoteHandler={addNewNoteHandler} />
-						<SearchNotes />
 					</div>
 					<NotesList list={notesList} setViewer={setViewer} />
 				</div>
 				<div className='col-8'>
 					{!editMode ? (
-						viewerComponent ? (
-							<NotesViewer
-								item={currentNote}
-								activateEditor={activateEditor}
-								deleteNote={deleteNote}
-								setViewerComponent={setViewerComponent}
-							/>
-						) : (
-							<div className='d-flex justify-content-center align-items-center'>
-								<h5>Select a note to view</h5>
-								<h6 className='text-secondary ml-2'>or</h6>
-								<div className='w-25 ml-3'>
-									<AddNewNote addNewNoteHandler={addNewNoteHandler} />
-								</div>
+						<div>
+							{viewerComponent ? (
+								<NotesViewer
+									item={currentNote}
+									activateEditor={activateEditor}
+									deleteNote={deleteNote}
+									setViewerComponent={setViewerComponent}
+								/>
+							) : (
+								<>
+									<div className='large-screen d-flex justify-content-center align-items-center  d-none d-md-block'>
+										<h5>Select a note to view</h5>
+										<h6 className='text-secondary ml-2'>or</h6>
+										<div className='w-25 ml-3'>
+											<AddNewNote addNewNoteHandler={addNewNoteHandler} />
+										</div>
+									</div>
+									<div className='small-screen d-md-none'>
+										<h6>Select a note to view</h6>
+									</div>
+								</>
+							)}
+							<div
+								className='small-screen-add-btn d-md-none'
+								style={{
+									position: 'fixed',
+									right: '10px',
+									bottom: '10px',
+									height: '50px',
+									width: '50px',
+								}}
+							>
+								<AddNewNote addNewNoteHandler={addNewNoteHandler} />
 							</div>
-						)
+						</div>
 					) : (
 						<NotesEditor
 							setViewerOnSubmit={setViewer}

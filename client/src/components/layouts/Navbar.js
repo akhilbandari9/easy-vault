@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
-
+import '../../../node_modules/bootstrap/js/src/collapse';
 function Navbar({ title = 'Easy Vault', icon = 'fas fa-user-shield' }) {
 	const authContext = useContext(AuthContext);
 	const contactContext = useContext(ContactContext);
@@ -58,7 +58,7 @@ function Navbar({ title = 'Easy Vault', icon = 'fas fa-user-shield' }) {
 
 	return (
 		<div
-			className='navbar navbar-light navbar-expand-sm mb-3'
+			className='navbar navbar-light navbar-expand-md mb-3'
 			style={{ background: '#e3f2fd' }}
 		>
 			<div class='container-fluid'>
@@ -72,9 +72,6 @@ function Navbar({ title = 'Easy Vault', icon = 'fas fa-user-shield' }) {
 					type='button'
 					data-toggle='collapse'
 					data-target='#navbarSupportedContent'
-					aria-controls='navbarSupportedContent'
-					aria-expanded='false'
-					aria-label='Toggle navigation'
 				>
 					<span className='navbar-toggler-icon'></span>
 				</button>

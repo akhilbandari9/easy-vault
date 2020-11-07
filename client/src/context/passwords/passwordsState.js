@@ -21,6 +21,7 @@ const PasswordsState = (props) => {
 		filtered: null,
 		current_password: null,
 		error: null,
+		loading: true,
 	};
 	const [state, dispatch] = useReducer(PasswordsReducer, initialState);
 
@@ -146,6 +147,7 @@ const PasswordsState = (props) => {
 				current_password: state.current,
 				filtered_passwords: state.filtered,
 				passwords_error: state.error,
+				loading: state.loading,
 				addPassword,
 				deletePassword,
 				setCurrentPassword,

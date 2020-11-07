@@ -5,11 +5,11 @@ import routes from '../../routes';
 function SideBar() {
 	return (
 		<>
-			<div className='mb-3'>
-				<ul className='list-group'>
+			<div className='mb-3 container'>
+				<ul className='list-group flex-row flex-md-column list-group-flush'>
 					<NavLink
 						to={routes.contacts}
-						className='list-group-item'
+						className='list-group-item flex-fill  border-bottom rounded'
 						activeClassName='active'
 					>
 						Contacts
@@ -17,7 +17,7 @@ function SideBar() {
 
 					<NavLink
 						to={routes.passwords}
-						className='list-group-item'
+						className='list-group-item flex-fill border-bottom rounded'
 						activeClassName='active'
 					>
 						Password Manager
@@ -25,7 +25,7 @@ function SideBar() {
 
 					<NavLink
 						to={routes.notes}
-						className='list-group-item'
+						className='list-group-item flex-fill border-bottom rounded'
 						activeClassName='active'
 					>
 						Notes
