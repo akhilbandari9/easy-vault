@@ -24,14 +24,14 @@ const PasswordItem = ({
 
 			{username && (
 				<div className='username mb-2'>
-					<label className='text-secondary'> Email : </label>
+					<label className='text-secondary'> Username : </label>
 					<span>{`  ${username}`}</span>
 				</div>
 			)}
 
 			{email && (
 				<div className='email mb-2'>
-					<label className='text-secondary'> Username : </label>
+					<label className='text-secondary'> Email : </label>
 					<span>{`  ${email}`}</span>
 				</div>
 			)}

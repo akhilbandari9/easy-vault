@@ -12,7 +12,7 @@ const PasswordsList = () => {
 	}, [passwords]);
 
 	if (passwords !== null && passwords.length === 0 && !loading) {
-		return <h4>Please add a contact</h4>;
+		return <h5 className='text-center'>You don't have any passwords saved </h5>;
 	}
 	return (
 		<>

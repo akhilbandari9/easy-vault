@@ -66,14 +66,10 @@ const Index = () => {
 							) : (
 								<>
 									<div className='large-screen d-flex justify-content-center align-items-center  d-none d-md-block'>
-										<h5>Select a note to view</h5>
-										<h6 className='text-secondary ml-2'>or</h6>
-										<div className='w-25 ml-3'>
-											<AddNewNote addNewNoteHandler={addNewNoteHandler} />
-										</div>
+										<h5 className='text-center'>Select a note to view</h5>
 									</div>
 									<div className='small-screen d-md-none'>
-										<h6>Select a note to view</h6>
+										<h6>Select a note to view or Add New</h6>
 									</div>
 								</>
 							)}

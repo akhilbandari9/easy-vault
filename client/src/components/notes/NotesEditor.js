@@ -56,7 +56,7 @@ const NotesEditor = ({ setViewerComponent, setEditMode }) => {
 
 	return (
 		<form onSubmit={Submit} className='mb-4'>
-			<div className='container'>
+			<div className='container-fluid'>
 				<h2>Notes Editor</h2>
 				<div>
 					<div>
@@ -117,8 +117,8 @@ const ColorPicker = ({ color, handleColor, currColor = '#4361ee' }) => {
 				name='color'
 				style={{
 					background: `${color}`,
-					width: '40px',
-					height: '40px',
+					width: '30px',
+					height: '30px',
 					display: 'block',
 					cursor: 'pointer',
 				}}
